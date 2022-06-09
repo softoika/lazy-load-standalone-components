@@ -1,0 +1,29 @@
+<form (submit)="onSubmit($event)">
+  <h1 mat-dialog-title>Edit Profile</h1>
+  <section mat-dialog-content>
+    <p>
+      <mat-form-field [style.width.%]="100">
+        <mat-label>Name</mat-label>
+        <input matInput type="text" name="name" value="" />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field [style.width.%]="100">
+        <mat-label>Bio</mat-label>
+        <textarea matInput name="bio"></textarea>
+      </mat-form-field>
+    </p>
+  </section>
+  <section mat-dialog-actions align="end">
+    <button type="reset" mat-button mat-dialog-close>Cancel</button>
+    <button
+      type="submit"
+      mat-flat-button
+      color="primary"
+      mat-dialog-close
+      cdkFocusInitial
+    >
+      Save
+    </button>
+  </section>
+</form>
